@@ -1,24 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
+import Banner from './component/Banner';
+import Nav from './component/Nav';
+import request from './component/request';
+import Row from './component/Row';
+
 
 function App() {
   return (
+
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Banner />
+      <Row 
+        isLargeRow={true}
+        title='NETFLIX ORIGINAL'
+        fetchUrl={request.fetchNetFlixOriginals}
+      />
+      <Row 
+        
+        title='TRENDING'
+        fetchUrl={request.fetchTreding}
+      />
+      <Row 
+        
+        title='RATED'
+        fetchUrl={request.fetchTopRated}
+      />
+      <Row 
+        
+        title='ACTION MOVIES'
+        fetchUrl={request.fetchActionMovies}
+      />
+      <Row 
+        
+        title='COMEDY MOVIES'
+        fetchUrl={request.fetchComedyMovies}
+      />
+      <Row 
+        
+        title='HORROR'
+        fetchUrl={request.fetchHorroMovies}
+      />
+      <Row 
+        
+        title='ROMANTIC'
+        fetchUrl={request.fetchRomanticMovies}
+      />
+      <Row 
+        
+        title='DACUMENTARY'
+        fetchUrl={request.fetchDocumentaries}
+      />
     </div>
+    </>
   );
 }
 
