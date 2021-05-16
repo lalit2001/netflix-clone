@@ -1,5 +1,6 @@
 import './App.css';
 import Banner from './component/Banner';
+import Footer from './component/Footer';
 import Nav from './component/Nav';
 import request from './component/request';
 import Row from './component/Row';
@@ -52,6 +53,7 @@ function App() {
         title='DACUMENTARY'
         fetchUrl={request.fetchDocumentaries}
       />
+      <Footer/>
     </div>
     </>
   );
